@@ -1,0 +1,153 @@
+---
+openapi: 3.0.3
+info:
+  title: Accounts
+  version: 1.0.0
+  contact: {}
+servers:
+  - url: "{{url}}"
+paths:
+  /accounts/create:
+    post:
+      summary: Create
+      description: Create
+      operationId: create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                holder:
+                  type: string
+                  example: "{{customerId}}"
+                type:
+                  type: string
+                  example: "Auto Loan Account"
+            example:
+              holder: "{{customerId}}"
+              type: "Personal Loan Account"
+      responses:
+        "200":
+          description: "this is some content"
+  "/accounts/{accountNumber}/overview":
+    get:
+      summary: Overview
+      description: Overview
+      operationId: overview
+      responses:
+        "200":
+          description: ""
+    parameters:
+      - name: accountNumber
+        in: path
+        required: true
+        schema:
+          type: string
+  "/accounts/{accountNumber}/statement/date":
+    get:
+      tags:
+        - Statement
+      summary: Date
+      description: Date
+      operationId: date
+      requestBody:
+        content:
+          application/form-urlencoded:
+            schema:
+              type: object
+              properties:
+                from:
+                  type: string
+                  example: "Thu Mar 30 2023 17:15:02 GMT-0400 (Eastern Daylight Time)"
+                to:
+                  type: string
+                  example: "Tue May 16 2023 17:01:41 GMT-0400 (Eastern Daylight Time)"
+            example:
+              from: "Wed Jun 08 2022 12:12:29 GMT-0400 (Eastern Daylight Time)"
+              to: "Wed May 17 2023 04:26:34 GMT-0400 (Eastern Daylight Time)"
+      responses:
+        "200":
+          description: 200 OK
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
+            Connection:
+              schema:
+                type: string
+                example: close
+            Content-Encoding:
+              schema:
+                type: string
+                example: gzip
+            Date:
+              schema:
+                type: string
+                example: "Mon, 14 Jun 2021 14:30:25 GMT"
+            ETag:
+              schema:
+                type: string
+                example: "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+            Server:
+              schema:
+                type: string
+                example: nginx
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            X-RateLimit-Limit:
+              schema:
+                type: string
+                example: "120"
+            X-RateLimit-Remaining:
+              schema:
+                type: string
+                example: "119"
+            X-RateLimit-Reset:
+              schema:
+                type: string
+                example: "1623681083"
+            x-srv-span:
+              schema:
+                type: string
+                example: v=1;s=210e5b055e5bd71e
+            x-srv-trace:
+              schema:
+                type: string
+                example: v=1;t=d33d68b932344fce
+          content:
+            text/plain:
+              examples:
+                200 OK:
+                  value: "{\n    \"period\": {\n        \"from\": \"Fri Feb 24 2023 13:57:05 GMT-0500 (Eastern Standard Time)\",\n        \"to\": \"Tue May 16 2023 12:54:32 GMT-0400 (Eastern Daylight Time)\"\n    },\n    \"balance\": {\n        \"opening\": 782.66,\n        \"closing\": 339.24\n    },\n    \"money\": {\n        \"in\": 620.99,\n        \"out\": 254.36\n    },\n    \"transactions\": [\n        {\n            \"date\": \"Wed May 17 2023 02:28:44 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Donnelly, Nicolas and Schimmel\",\n            \"type\": \"payment\",\n            \"amount\": 97.29,\n            \"balance\": 242.07\n        },\n        {\n            \"date\": \"Tue May 16 2023 23:33:12 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Mayert LLC\",\n            \"type\": \"withdrawal\",\n            \"amount\": 561.81,\n            \"balance\": 703.10\n        },\n        {\n            \"date\": \"Tue May 16 2023 23:18:01 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Heller - Ritchie\",\n            \"type\": \"deposit\",\n            \"amount\": 962.28,\n            \"balance\": 300.73\n        },\n        {\n            \"date\": \"Wed May 17 2023 04:58:53 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Halvorson - Lynch\",\n            \"type\": \"payment\",\n            \"amount\": 304.62,\n            \"balance\": 411.11\n        },\n        {\n            \"date\": \"Wed May 17 2023 02:20:59 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Fritsch Inc\",\n            \"type\": \"invoice\",\n            \"amount\": 202.41,\n            \"balance\": 733.49\n        },\n        {\n            \"date\": \"Wed May 17 2023 06:45:17 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Hamill, Monahan and Lubowitz\",\n            \"type\": \"payment\",\n            \"amount\": 976.65,\n            \"balance\": 426.66\n        },\n        {\n            \"date\": \"Tue May 16 2023 10:38:39 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Goodwin, Mayer and Stoltenberg\",\n            \"type\": \"invoice\",\n            \"amount\": 400.78,\n            \"balance\": 501.93\n        },\n        {\n            \"date\": \"Wed May 17 2023 08:02:14 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Friesen LLC\",\n            \"type\": \"invoice\",\n            \"amount\": 735.24,\n            \"balance\": 948.91\n        },\n        {\n            \"date\": \"Tue May 16 2023 14:57:13 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Cummerata - Willms\",\n            \"type\": \"payment\",\n            \"amount\": 584.16,\n            \"balance\": 807.13\n        },\n        {\n            \"date\": \"Tue May 16 2023 12:01:01 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Kovacek LLC\",\n            \"type\": \"deposit\",\n            \"amount\": 98.25,\n            \"balance\": 651.18\n        }\n    ]\n}"
+    parameters:
+      - name: accountNumber
+        in: path
+        required: true
+        schema:
+          type: string
+  "/accounts/{accountNumber}/statement/latest":
+    get:
+      tags:
+        - Statement
+      summary: Latest
+      description: Latest
+      operationId: latest
+      responses:
+        "200":
+          description: ""
+    parameters:
+      - name: accountNumber
+        in: path
+        required: true
+        schema:
+          type: string
+tags:
+  - name: Statement

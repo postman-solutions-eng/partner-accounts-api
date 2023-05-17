@@ -1,0 +1,513 @@
+{
+	"info": {
+		"_postman_id": "2fa26787-b7c5-4628-977b-f29a9e9b503e",
+		"name": "Accounts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "16727226-2fa26787-b7c5-4628-977b-f29a9e9b503e"
+	},
+	"item": [
+		{
+			"name": "Statement",
+			"item": [
+				{
+					"name": "Statement",
+					"id": "bc2ef198-7275-488e-baa6-69b0d9dc5f02",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"from\": \"Fri Aug 05 2022 15:46:38 GMT-0400 (Eastern Daylight Time)\",\n  \"to\": \"Tue May 16 2023 21:16:19 GMT-0400 (Eastern Daylight Time)\"\n}"
+						},
+						"url": {
+							"raw": "{{accountsUri}}/accounts/:accountNumber/statement",
+							"host": [
+								"{{accountsUri}}"
+							],
+							"path": [
+								"accounts",
+								":accountNumber",
+								"statement"
+							],
+							"variable": [
+								{
+									"id": "72fbbb9f-e6ea-4dc3-a3dd-ba484499c462",
+									"key": "accountNumber",
+									"value": "bf537faa-61f4-11ed-9b6a-0242ac120002",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "Date"
+					},
+					"response": [
+						{
+							"id": "31a73f2a-e76d-48d5-bd38-79a9af2c7468",
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/form-urlencoded"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"from\": \"Fri Aug 05 2022 15:46:38 GMT-0400 (Eastern Daylight Time)\",\n  \"to\": \"Tue May 16 2023 21:16:19 GMT-0400 (Eastern Daylight Time)\"\n}"
+								},
+								"url": {
+									"raw": "{{accountsUri}}/accounts/:accountNumber/statement",
+									"host": [
+										"{{accountsUri}}"
+									],
+									"path": [
+										"accounts",
+										":accountNumber",
+										"statement"
+									],
+									"variable": [
+										{
+											"id": "72fbbb9f-e6ea-4dc3-a3dd-ba484499c462",
+											"key": "accountNumber",
+											"value": "bf537faa-61f4-11ed-9b6a-0242ac120002",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Date"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"disabled": false,
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"description": ""
+								},
+								{
+									"disabled": false,
+									"key": "Connection",
+									"value": "close",
+									"description": ""
+								},
+								{
+									"disabled": false,
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"description": ""
+								},
+								{
+									"disabled": false,
+									"key": "Date",
+									"value": "Mon, 14 Jun 2021 14:30:25 GMT",
+									"description": ""
+								},
+								{
+									"disabled": false,
+									"key": "ETag",
+									"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\"",
+									"description": ""
+								},
+								{
+									"disabled": false,
+									"key": "Server",
+									"value": "nginx",
+									"description": ""
+								},
+								{
+									"disabled": false,
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"description": ""
+								},
+								{
+									"disabled": false,
+									"key": "Vary",
+									"value": "Accept-Encoding",
+									"description": ""
+								},
+								{
+									"disabled": false,
+									"key": "X-RateLimit-Limit",
+									"value": "120",
+									"description": ""
+								},
+								{
+									"disabled": false,
+									"key": "X-RateLimit-Remaining",
+									"value": "119",
+									"description": ""
+								},
+								{
+									"disabled": false,
+									"key": "X-RateLimit-Reset",
+									"value": "1623681083",
+									"description": ""
+								},
+								{
+									"disabled": false,
+									"key": "x-srv-span",
+									"value": "v=1;s=210e5b055e5bd71e",
+									"description": ""
+								},
+								{
+									"disabled": false,
+									"key": "x-srv-trace",
+									"value": "v=1;t=d33d68b932344fce",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"name": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"period\": {\n        \"from\": \"Wed Jun 15 2022 03:00:37 GMT-0400 (Eastern Daylight Time)\",\n        \"to\": \"Tue May 16 2023 12:47:44 GMT-0400 (Eastern Daylight Time)\"\n    },\n    \"balance\": {\n        \"opening\": 608.69,\n        \"closing\": 725.12\n    },\n    \"money\": {\n        \"in\": 679.94,\n        \"out\": 115.90\n    },\n    \"transactions\": [\n        {\n            \"date\": \"Tue May 16 2023 15:35:17 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Abernathy - Bartoletti\",\n            \"type\": \"deposit\",\n            \"amount\": 892.31,\n            \"balance\": 832.06\n        },\n        {\n            \"date\": \"Wed May 17 2023 02:20:34 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Champlin Group\",\n            \"type\": \"invoice\",\n            \"amount\": 918.47,\n            \"balance\": 700.28\n        },\n        {\n            \"date\": \"Tue May 16 2023 19:23:10 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Pacocha, Pfannerstill and Tromp\",\n            \"type\": \"withdrawal\",\n            \"amount\": 238.49,\n            \"balance\": 611.16\n        },\n        {\n            \"date\": \"Tue May 16 2023 14:06:30 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Hills, Mills and Toy\",\n            \"type\": \"payment\",\n            \"amount\": 674.13,\n            \"balance\": 662.94\n        },\n        {\n            \"date\": \"Wed May 17 2023 09:01:10 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Gibson Inc\",\n            \"type\": \"payment\",\n            \"amount\": 376.55,\n            \"balance\": 785.94\n        },\n        {\n            \"date\": \"Tue May 16 2023 18:32:24 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Goodwin, Feeney and Zieme\",\n            \"type\": \"withdrawal\",\n            \"amount\": 690.10,\n            \"balance\": 27.28\n        },\n        {\n            \"date\": \"Tue May 16 2023 14:04:49 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Gerhold - Walker\",\n            \"type\": \"deposit\",\n            \"amount\": 287.29,\n            \"balance\": 938.22\n        },\n        {\n            \"date\": \"Wed May 17 2023 01:07:56 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Bergnaum - Steuber\",\n            \"type\": \"invoice\",\n            \"amount\": 773.63,\n            \"balance\": 690.19\n        },\n        {\n            \"date\": \"Tue May 16 2023 13:26:53 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Baumbach - Crist\",\n            \"type\": \"invoice\",\n            \"amount\": 62.18,\n            \"balance\": 116.53\n        },\n        {\n            \"date\": \"Wed May 17 2023 09:15:23 GMT-0400 (Eastern Daylight Time)\",\n            \"description\": \"Jast and Sons\",\n            \"type\": \"deposit\",\n            \"amount\": 537.18,\n            \"balance\": 949.60\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Latest",
+					"id": "b68df3a7-37bc-4c70-a7e9-1de4384a2b55",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{accountsUri}}/accounts/:accountNumber/statement/latest",
+							"host": [
+								"{{accountsUri}}"
+							],
+							"path": [
+								"accounts",
+								":accountNumber",
+								"statement",
+								"latest"
+							],
+							"variable": [
+								{
+									"id": "dc960d6e-c633-4f62-8f4e-820e13a21ed6",
+									"key": "accountNumber",
+									"value": "eu Lorem",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "Latest"
+					},
+					"response": [
+						{
+							"id": "2ea979d2-3f00-4a9d-a7c7-78bc8354fc80",
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{accountsUri}}/accounts/:accountNumber/statement/latest",
+									"host": [
+										"{{accountsUri}}"
+									],
+									"path": [
+										"accounts",
+										":accountNumber",
+										"statement",
+										"latest"
+									],
+									"variable": [
+										{
+											"id": "dc960d6e-c633-4f62-8f4e-820e13a21ed6",
+											"key": "accountNumber",
+											"value": "eu Lorem",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Latest"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"id": "50653533-698f-4716-8381-a5440c90747b"
+		},
+		{
+			"name": "Create",
+			"id": "92ba9b97-4f91-461a-b982-955ae02221ff",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"holder\": \"{{customerId}}\",\n  \"type\": \"Credit Card Account\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{accountsUri}}/accounts/create",
+					"host": [
+						"{{accountsUri}}"
+					],
+					"path": [
+						"accounts",
+						"create"
+					]
+				},
+				"description": "Create"
+			},
+			"response": [
+				{
+					"id": "47f2f645-6309-4aa8-a46e-2f6abd6f1513",
+					"name": "this is some content",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"holder\": \"{{customerId}}\",\n  \"type\": \"Credit Card Account\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{accountsUri}}/accounts/create",
+							"host": [
+								"{{accountsUri}}"
+							],
+							"path": [
+								"accounts",
+								"create"
+							]
+						},
+						"description": "Create"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Overview",
+			"id": "19210069-abaf-4d3d-a510-ef0984b57a7a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{accountsUri}}/accounts/:accountNumber/overview",
+					"host": [
+						"{{accountsUri}}"
+					],
+					"path": [
+						"accounts",
+						":accountNumber",
+						"overview"
+					],
+					"variable": [
+						{
+							"id": "73a83e8c-f62e-4673-a3e5-e6da53d7aa41",
+							"key": "accountNumber",
+							"value": "eu Lorem",
+							"description": "(Required) "
+						}
+					]
+				},
+				"description": "Overview"
+			},
+			"response": [
+				{
+					"id": "7bb0438f-fa14-4839-8ab6-77702b627706",
+					"name": "response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{accountsUri}}/accounts/:accountNumber/overview",
+							"host": [
+								"{{accountsUri}}"
+							],
+							"path": [
+								"accounts",
+								":accountNumber",
+								"overview"
+							],
+							"variable": [
+								{
+									"id": "73a83e8c-f62e-4673-a3e5-e6da53d7aa41",
+									"key": "accountNumber",
+									"value": "eu Lorem",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "Overview"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Accounts by customer ID",
+			"id": "773db8d2-02a9-483e-9750-f0553d7ec0b6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{accountsUri}}/accounts/:customerId",
+					"host": [
+						"{{accountsUri}}"
+					],
+					"path": [
+						"accounts",
+						":customerId"
+					],
+					"variable": [
+						{
+							"id": "fd5b248a-7fe4-4f48-864c-09b56b3a72ef",
+							"key": "customerId",
+							"value": "12340000"
+						}
+					]
+				},
+				"description": "Overview"
+			},
+			"response": [
+				{
+					"id": "ed67ab68-2ee6-486f-8023-4a263b1db72f",
+					"name": "Accounts by customer ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{accountsUri}}/accounts/:customerId",
+							"host": [
+								"{{accountsUri}}"
+							],
+							"path": [
+								"accounts",
+								":customerId"
+							],
+							"variable": [
+								{
+									"id": "fd5b248a-7fe4-4f48-864c-09b56b3a72ef",
+									"key": "customerId",
+									"value": "12340000"
+								}
+							]
+						},
+						"description": "Overview"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "74404753-81e1-4fcb-98ac-55f77a8d9edc",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "93785e62-b17a-4d7b-96e5-fb20e0b88de1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
