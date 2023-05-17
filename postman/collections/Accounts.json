@@ -43,7 +43,6 @@
 							],
 							"variable": [
 								{
-									"id": "72fbbb9f-e6ea-4dc3-a3dd-ba484499c462",
 									"key": "accountNumber",
 									"value": "bf537faa-61f4-11ed-9b6a-0242ac120002",
 									"description": "(Required) "
@@ -84,7 +83,6 @@
 									],
 									"variable": [
 										{
-											"id": "72fbbb9f-e6ea-4dc3-a3dd-ba484499c462",
 											"key": "accountNumber",
 											"value": "bf537faa-61f4-11ed-9b6a-0242ac120002",
 											"description": "(Required) "
@@ -210,9 +208,8 @@
 							],
 							"variable": [
 								{
-									"id": "dc960d6e-c633-4f62-8f4e-820e13a21ed6",
 									"key": "accountNumber",
-									"value": "eu Lorem",
+									"value": "bf537faa-61f4-11ed-9b6a-0242ac120002",
 									"description": "(Required) "
 								}
 							]
@@ -239,9 +236,8 @@
 									],
 									"variable": [
 										{
-											"id": "dc960d6e-c633-4f62-8f4e-820e13a21ed6",
 											"key": "accountNumber",
-											"value": "eu Lorem",
+											"value": "bf537faa-61f4-11ed-9b6a-0242ac120002",
 											"description": "(Required) "
 										}
 									]
@@ -368,7 +364,6 @@
 					],
 					"variable": [
 						{
-							"id": "73a83e8c-f62e-4673-a3e5-e6da53d7aa41",
 							"key": "accountNumber",
 							"value": "eu Lorem",
 							"description": "(Required) "
@@ -396,7 +391,6 @@
 							],
 							"variable": [
 								{
-									"id": "73a83e8c-f62e-4673-a3e5-e6da53d7aa41",
 									"key": "accountNumber",
 									"value": "eu Lorem",
 									"description": "(Required) "
@@ -439,7 +433,6 @@
 					],
 					"variable": [
 						{
-							"id": "fd5b248a-7fe4-4f48-864c-09b56b3a72ef",
 							"key": "customerId",
 							"value": "12340000"
 						}
@@ -465,7 +458,6 @@
 							],
 							"variable": [
 								{
-									"id": "fd5b248a-7fe4-4f48-864c-09b56b3a72ef",
 									"key": "customerId",
 									"value": "12340000"
 								}
@@ -492,7 +484,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "74404753-81e1-4fcb-98ac-55f77a8d9edc",
+				"id": "f9fc49bc-825a-4ff7-8c7f-bdf232ee42a7",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -502,10 +494,12 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "93785e62-b17a-4d7b-96e5-fb20e0b88de1",
+				"id": "015c61f2-045a-4bf4-a9d1-5671d5abf0b7",
 				"type": "text/javascript",
 				"exec": [
-					""
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});"
 				]
 			}
 		}
