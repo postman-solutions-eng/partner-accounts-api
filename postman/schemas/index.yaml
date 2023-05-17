@@ -3,7 +3,10 @@ openapi: 3.0.3
 info:
   title: Accounts API
   version: 1.0.0
-  contact: {}
+  contact: 
+    name: Example Support
+    email: support@example.com
+    url: example.com
 servers:
   - url: "{{url}}"
 paths:
@@ -151,3 +154,5 @@ paths:
           type: string
 tags:
   - name: Statement
+security:
+  - testAuth: []
